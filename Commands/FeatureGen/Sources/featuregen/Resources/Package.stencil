@@ -1,0 +1,43 @@
+// swift-tools-version: 5.9
+// The swift-tools-version declares the minimum version of Swift required to build this package.
+
+import PackageDescription
+
+let package = Package(
+    name: "{{ featureName }}",
+    platforms: [.iOS(.v17)],
+    products: [
+        // Products define the executables and libraries a package produces, making them visible to other packages.
+        .library(
+            name: "{{ featureName }}",
+            targets: ["{{ featureName }}"]
+        ),
+    ],
+    dependencies: [
+        .package(path: "../../AppCore"),
+        .package(path: "../../AppModel"),
+        .package(path: "../../AppRepository"),
+        .package(
+            url: "https://github.com/hiragram/xcstrings-tool-plugin.git",
+            from: "0.1.2"
+        ),
+    ],
+    targets: [
+        // Targets are the basic building blocks of a package, defining a module or a test suite.
+        // Targets can depend on other targets in this package and products from dependencies.
+        .target(
+            name: "{{ featureName }}",
+            dependencies: [
+                .product(name: "AppCore", package: "AppCore"),
+                .product(name: "AppModel", package: "AppModel"),
+                .product(name: "AppRepository", package: "AppRepository"),
+            ],
+            plugins: [
+                .plugin(name: "XCStringsToolPlugin", package: "xcstrings-tool-plugin"),
+            ]
+        ),
+        .testTarget(
+            name: "{{ featureName }}Tests",
+            dependencies: ["{{ featureName }}"]),
+    ]
+)

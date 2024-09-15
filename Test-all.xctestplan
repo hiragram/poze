@@ -1,0 +1,73 @@
+{
+  "configurations" : [
+    {
+      "id" : "A40A1481-98C7-4495-B0D1-BD1AA898386F",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:AppContent",
+        "identifier" : "AppContentTests",
+        "name" : "AppContentTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:AppCore",
+        "identifier" : "AppCoreTests",
+        "name" : "AppCoreTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:AppModel",
+        "identifier" : "AppModelTests",
+        "name" : "AppModelTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:AppRepository",
+        "identifier" : "AppRepositoryTests",
+        "name" : "AppRepositoryTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:AppUI",
+        "identifier" : "AppUITests",
+        "name" : "AppUITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:AudioEngine",
+        "identifier" : "AudioEngineTests",
+        "name" : "AudioEngineTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:ChatGPTAPI",
+        "identifier" : "ChatGPTAPITests",
+        "name" : "ChatGPTAPITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:AppFeatures\/Compose",
+        "identifier" : "ComposeTests",
+        "name" : "ComposeTests"
+      }
+    }
+  ],
+  "version" : 1
+}

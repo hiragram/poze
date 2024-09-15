@@ -1,0 +1,84 @@
+import SwiftUI
+import AppCore
+import AppUI
+
+public struct {{ screenName }}<Presenter: {{ screenName }}PresenterProtocol>: View, VIPERScreen {
+    @Bindable public var presenter: Presenter
+
+    @Environment(\.dynamicTypeSize) var dynamicTypeSize
+
+    public let logger = Logger<Event>()
+
+    public init(presenter: Presenter) {
+        self.presenter = presenter
+    }
+
+    public var body: some View {
+        Group {
+            Text("{{ screenName }}")
+        }
+        .background {
+            Color.appBackground
+                .ignoresSafeArea()
+        }
+        .onAppear {
+            presenter.viewDidAppear()
+        }
+    }
+
+    public enum Event: CategorizedEvents {
+        public static var categoryName: String {
+            "{{ screenName }}_View"
+        }
+
+        public var eventName: String {
+            switch self {
+                
+            }
+        }
+
+        public var parameters: [String: CustomStringConvertible] {
+            switch self {
+                
+            }
+        }
+
+        public var logLevel: LogLevel {
+            switch self {
+                
+            }
+        }
+
+        public var content: LogMessage {
+            switch self {
+                
+            }
+        }
+    }
+}
+
+struct {{ screenName }}_Previews: PreviewProvider {
+    static var previews: some View {
+        view(
+            presenter: {{ screenName }}Presenter(
+                interactor: Mock{{ screenName }}Interactor(),
+                router: Mock{{ screenName }}Router()
+            )
+        )
+        .ignoresSafeArea()
+        .previewDisplayName("live")
+        
+        ForEach(Mock{{ screenName }}Presenter.mockPresenters) { presenter in
+            view(presenter: presenter)
+                .ignoresSafeArea()
+                .previewDisplayName(presenter.previewName)
+        }
+    }
+    
+    @ViewBuilder static func view<P: {{ screenName }}PresenterProtocol>(presenter: P) -> some View {
+        NavigationStack {
+            {{ screenName }}(presenter: presenter)
+                .tint(Color.keyColorForPreview)
+        }
+    }
+}

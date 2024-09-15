@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "D409FFD6-F63E-4DBC-9769-36A8A52599CD",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "AppModelTests",
+        "name" : "AppModelTests"
+      }
+    }
+  ],
+  "version" : 1
+}

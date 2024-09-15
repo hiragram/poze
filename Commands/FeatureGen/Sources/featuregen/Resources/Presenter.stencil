@@ -1,0 +1,77 @@
+import Foundation
+import AppCore
+import Combine
+
+public protocol {{ screenName }}PresenterProtocol: Observable, PresenterProtocol where Interactor: {{ screenName }}InteractorProtocol, Router: {{ screenName }}RouterProtocol {
+
+}
+
+@Observable final public class {{ screenName }}Presenter<Interactor: {{ screenName }}InteractorProtocol, Router: {{ screenName }}RouterProtocol>: {{ screenName }}PresenterProtocol {
+    public var interactor: Interactor
+    public var router: Router
+    
+    public var cancellables: [AnyCancellable] = []
+
+    public init(interactor: Interactor, router: Router) {
+        self.interactor = interactor
+        self.router = router
+    }
+
+    let logger = AppCore.Logger<Event>()
+
+    enum Event: AppCore.CategorizedEvents {
+        static var categoryName: String {
+            "{{ screenName }}_Presenter"
+        }
+
+        var eventName: String {
+            switch self {
+                
+            }
+        }
+
+        var parameters: [String: CustomStringConvertible] {
+            switch self {
+                
+            }
+        }
+
+        var logLevel: AppCore.LogLevel {
+            switch self {
+                
+            }
+        }
+
+        var content: AppCore.LogMessage {
+            switch self {
+                
+            }
+        }
+    }
+}
+
+public struct {{ screenName }}Entity {
+
+}
+
+@Observable final class Mock{{ screenName }}Presenter: {{ screenName }}PresenterProtocol, MockPresenterProtocol, Identifiable {
+
+    var cancellables: [AnyCancellable] = []
+
+    let id = UUID()
+
+    var previewName: String?
+
+    var interactor = Mock{{ screenName }}Interactor()
+    var router = Mock{{ screenName }}Router()
+
+    init() {}
+
+    static let mockPresenters: [Mock{{ screenName }}Presenter] = [
+        .default,
+    ]
+
+    static let `default`: Mock{{ screenName }}Presenter = Mock{{ screenName }}Presenter.with(previewName: "default", { p in 
+    
+    })
+}

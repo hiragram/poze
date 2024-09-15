@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "26E5BC81-3557-4E73-8D46-0E3629D25AD7",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..\/AppCore",
+        "identifier" : "AppCoreTests",
+        "name" : "AppCoreTests"
+      }
+    }
+  ],
+  "version" : 1
+}

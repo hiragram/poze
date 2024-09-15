@@ -1,0 +1,46 @@
+import Foundation
+import AppCore
+
+public protocol {{ screenName }}InteractorProtocol: InteractorProtocol {
+
+}
+
+final public class {{ screenName }}Interactor: {{ screenName }}InteractorProtocol {
+    public init() {}
+
+    let logger = Logger<Event>()
+
+    enum Event: CategorizedEvents {
+        static var categoryName: String {
+            "{{ screenName }}_Interactor"
+        }
+
+        var eventName: String {
+            switch self {
+                
+            }
+        }
+
+        var parameters: [String: CustomStringConvertible] {
+            switch self {
+                
+            }
+        }
+
+        var logLevel: AppCore.LogLevel {
+            switch self {
+                
+            }
+        }
+
+        var content: AppCore.LogMessage {
+            switch self {
+                
+            }
+        }
+    }
+}
+
+final class Mock{{ screenName }}Interactor: {{ screenName }}InteractorProtocol {
+
+}

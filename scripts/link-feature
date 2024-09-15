@@ -1,0 +1,7 @@
+#!/bin/bash -eux
+
+PROJECT_ROOT="$(cd "$(dirname "$0")/../" && pwd)"
+
+swift run --package-path Commands/FeatureGen featurelink $PROJECT_ROOT/App.xcodeproj
+
+make

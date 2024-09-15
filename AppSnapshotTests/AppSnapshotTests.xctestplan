@@ -1,0 +1,41 @@
+{
+  "configurations" : [
+    {
+      "id" : "18D09075-9C7E-47AA-82C5-7EC0EA8AE10F",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "environmentVariableEntries" : [
+      {
+        "key" : "SNAPSHOT_REFERENCE_DIR",
+        "value" : "${SRCROOT}\/AppSnapshotTests\/__Snapshots__"
+      },
+      {
+        "key" : "TZ",
+        "value" : "Asia\/Tokyo"
+      }
+    ],
+    "language" : "ja",
+    "region" : "JP",
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:App.xcodeproj",
+      "identifier" : "606A0A8E2B131735006BEFD5",
+      "name" : "Catalog"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:App.xcodeproj",
+        "identifier" : "606A0AA02B1335F3006BEFD5",
+        "name" : "AppSnapshotTests"
+      }
+    }
+  ],
+  "version" : 1
+}

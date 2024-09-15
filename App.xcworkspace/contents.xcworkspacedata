@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:TestUtility">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "AppFeatures">
+      <FileRef
+         location = "group:AppFeatures/SystemStatus">
+      </FileRef>
+      <FileRef
+         location = "group:AppFeatures/Home">
+      </FileRef>
+      <FileRef
+         location = "group:AppFeatures/RaceInfo">
+      </FileRef>
+      <FileRef
+         location = "group:AppFeatures/Debug">
+      </FileRef>
+      <FileRef
+         location = "group:AppFeatures/Stats">
+      </FileRef>
+      <FileRef
+         location = "group:AppFeatures/News">
+      </FileRef>
+      <FileRef
+         location = "group:AppFeatures/InAppPurchase">
+      </FileRef>
+      <FileRef
+         location = "group:AppFeatures/Menu">
+      </FileRef>
+      <FileRef
+         location = "group:AppFeatures/Opening">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:AppRepository">
+   </FileRef>
+   <FileRef
+      location = "group:AppModel">
+   </FileRef>
+   <FileRef
+      location = "group:AppContent">
+   </FileRef>
+   <FileRef
+      location = "group:AppCore">
+   </FileRef>
+   <FileRef
+      location = "group:App.xcodeproj">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "Commands">
+      <FileRef
+         location = "group:Commands/SnapshotTestCaseGen">
+      </FileRef>
+      <FileRef
+         location = "group:Commands/FeatureGen">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:AppContent/AppContent.xctestplan">
+   </FileRef>
+   <FileRef
+      location = "group:App/App.xctestplan">
+   </FileRef>
+   <FileRef
+      location = "group:AppSnapshotTests/AppSnapshotTests.xctestplan">
+   </FileRef>
+   <FileRef
+      location = "group:AppCore/AppCore.xctestplan">
+   </FileRef>
+   <FileRef
+      location = "group:Test-all.xctestplan">
+   </FileRef>
+   <FileRef
+      location = "group:AppModel/AppModel.xctestplan">
+   </FileRef>
+   <FileRef
+      location = "group:AppSnapshotTests/AppSnapshotTests-Update.xctestplan">
+   </FileRef>
+</Workspace>

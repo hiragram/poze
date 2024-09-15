@@ -1,0 +1,12 @@
+#!/bin/bash -eux
+
+PROJECT_DIR=$(cd $(dirname $0); cd ../ ; pwd)
+SCRIPTS_DIR=$PROJECT_DIR/scripts
+
+ACTUAL_VERSION=`defaults read $PROJECT_DIR/App/Info.plist CFBundleShortVersionString`
+EXPECTED_VERSION=`$SCRIPTS_DIR/extract-version-from-tag $CI_TAG`
+
+if [ "$ACTUAL_VERSION" != "$EXPECTED_VERSION" ]; then
+    echo "Version mismatch: $EXPECTED_VERSION is expected from git tag, but project has $ACTUAL_VERSION as its version." >&2
+    exit 1
+fi

@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+# Get the command line argument
+tag = ARGV[0]
+
+# Check if the argument is provided
+if tag.nil?
+    STDERR.puts "Error: Argument is required. format: v1.2.3-RC"
+    exit 1
+end
+
+# Extract major, minor, and patch from the tag
+match = /^v(\d+)\.(\d+)\.(\d+)-RC/.match(tag)
+major = match[1].to_i
+minor = match[2].to_i
+patch = match[3].to_i
+
+puts "#{major}.#{minor}.#{patch}"

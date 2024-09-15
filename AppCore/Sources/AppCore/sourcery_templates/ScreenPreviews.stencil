@@ -1,0 +1,43 @@
+import SwiftUI
+import AppCore
+
+{% for moduleDef in types.based.FeatureModule %}
+{% set moduleName moduleDef.name|replace:"Module", "" %}
+@testable import {{ moduleName }}
+{% endfor %}
+
+@MainActor func moduleList() -> [Module] {
+    [
+        {% for moduleDef in types.based.FeatureModule %}
+        {% set moduleName moduleDef.name|replace:"Module", "" %}
+        Module(
+            name: "{{ moduleName }}",
+            screens: [
+                {% for mockPresenter in types.based.MockPresenterProtocol %}
+                {% set screenName mockPresenter.name|replace:"Mock", ""|replace:"Presenter", "" %}
+                {% set mockPresenterPathComponents mockPresenter.path|dirname|dirname|dirname|dirname|dirname|split:"/" %}
+                {% set mockPresenterModuleName mockPresenterPathComponents.last %}
+                {% if mockPresenterModuleName == moduleName %}
+                Screen(
+                    name: "{{ screenName }}",
+                    previews: {{ mockPresenter.name }}.mockPresenters.map { mockPresenter in
+                        Preview(
+                            name: mockPresenter.previewName ?? UUID().uuidString,
+                            view: AnyView(
+                                BuiltView {
+                                    ViewConstructor.build(
+                                        {{ screenName }}.self,
+                                        presenter: mockPresenter
+                                    )
+                                }
+                            )
+                        )
+                    }
+                ),
+                {% endif %}
+                {% endfor %}
+            ]
+        ),
+        {% endfor %}
+    ]
+}

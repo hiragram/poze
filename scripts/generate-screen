@@ -1,0 +1,11 @@
+#!/bin/bash -eux
+
+PROJECT_ROOT="$(cd "$(dirname "$0")/../" && pwd)"
+SCRIPTS_DIR=$PROJECT_ROOT/scripts
+
+read -p "Feature name? : " FEATURE_NAME
+read -p "Screen name? : " SCREEN_NAME
+
+swift run --package-path Commands/FeatureGen featuregen $PROJECT_ROOT/App.xcodeproj $FEATURE_NAME $SCREEN_NAME
+
+$SCRIPTS_DIR/link-feature

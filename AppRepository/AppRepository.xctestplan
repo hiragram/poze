@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "CED9159F-193F-40CA-B183-C6A0A3291677",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "AppRepositoryTests",
+        "name" : "AppRepositoryTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -1,0 +1,45 @@
+{
+  "configurations" : [
+    {
+      "id" : "B9EC303E-A131-4BDD-BE06-7118EDB8AC90",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "environmentVariableEntries" : [
+      {
+        "key" : "SNAPSHOT_REFERENCE_DIR",
+        "value" : "${SRCROOT}\/AppSnapshotTests\/__Snapshots__"
+      },
+      {
+        "key" : "IS_RECORDING",
+        "value" : "1"
+      },
+      {
+        "key" : "TZ",
+        "value" : "Asia\/Tokyo"
+      }
+    ],
+    "language" : "ja",
+    "region" : "JP",
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:App.xcodeproj",
+      "identifier" : "606A0A8E2B131735006BEFD5",
+      "name" : "Catalog"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:App.xcodeproj",
+        "identifier" : "606A0AA02B1335F3006BEFD5",
+        "name" : "AppSnapshotTests"
+      }
+    }
+  ],
+  "version" : 1
+}

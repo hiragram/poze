@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "22CBB66A-D7D0-47A2-B3BA-3D7B4346AEF5",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "AppContentTests",
+        "name" : "AppContentTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -1,0 +1,11 @@
+import UIKit
+import SwiftUI
+import AppCore
+
+@MainActor public protocol {{ screenName }}RouterProtocol: RouterProtocol {
+
+}
+
+@MainActor final class Mock{{ screenName }}Router: {{ screenName }}RouterProtocol {
+    weak var viewController: UIViewController?
+}

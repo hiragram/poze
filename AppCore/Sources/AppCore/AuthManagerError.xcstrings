@@ -1,0 +1,23 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "appleIDIsAlreadyInUseInOtherAccount" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This account is already associated with a different user account."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このAppleIDは別のユーザーアカウントに紐づけられています。"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

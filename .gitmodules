@@ -1,0 +1,6 @@
+[submodule "AppSnapshotTests/__Snapshots__"]
+	path = AppSnapshotTests/__Snapshots__
+	url = git@github.com:hiragram/musicscrap-snapshot.git
+[submodule "server"]
+	path = server
+	url = git@github.com:hiragram/turnmark-server.git

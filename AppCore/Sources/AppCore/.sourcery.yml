@@ -1,0 +1,15 @@
+# this file is no longer used.
+
+configurations:
+  - sources:
+      - ../../../AppFeatures/
+    templates:
+      - sourcery_templates/ScreenPreviews.stencil
+    output:
+      $OUTPUT_PATH
+  - sources:
+      - ../../../AppFeatures/
+    templates:
+      - sourcery_templates/SnapshotTests.stencil
+    output:
+      $OUTPUT_PATH

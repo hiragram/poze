@@ -1,0 +1,22 @@
+{
+  "configurations" : [
+    {
+      "id" : "579BA17D-1005-4B7B-8A3E-190EB5C5F1FA",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:App.xcodeproj",
+      "identifier" : "60F53BBD2AC9C9DC0046885E",
+      "name" : "App"
+    }
+  },
+  "testTargets" : [
+
+  ],
+  "version" : 1
+}
